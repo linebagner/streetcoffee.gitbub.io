@@ -1,0 +1,367 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {
+    background-color: #262626;
+    color: white;
+    font-family: helvetica;
+}
+#body-index {
+    background-image: url(../images/forside.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    background-attachment: fixed;
+}
+
+#wrapper{
+    min-height: 800px;
+}
+
+.logo {
+    width: 30%;
+}
+img {
+    width: 100%;
+}
+
+#header-kaffebarer {
+    width: 100%;
+    background-image: url(../images/kaffebarer.jpg);
+     background-size: 100%;
+}
+#header-menu {
+    width: 100%;
+    background-image: url(../images/baggrundmenu.jpg);
+     background-size: 100%;
+}
+#header-mobilkaffe {
+    width: 100%;
+    background-image: url(../images/mobilkaffe.jpg);
+     background-size: 100%;
+}
+#header-voreskaffe {
+    width: 100%;
+    background-image: url(../images/voreskaffe.jpg);
+     background-size: 100%;
+}
+
+#header-omos {
+    width: 100%;
+    background-image: url(../images/omos.jpg);
+     background-size: 100%;
+}
+.kaffebarer img {
+    width: 272px;
+}
+.kaffebarer {
+    margin: 5%;
+}
+h2 {
+    font-family: helvetica;
+}
+h4 {
+    font-family: helvetica;
+    line-height: 1.5
+}
+
+#logo-burger {
+    display: flex;
+    margin-left: .5em;
+
+}
+
+#main-nav a {
+    color: black;
+    text-decoration: none;
+    background-color: darkgray;
+}
+
+#main-nav {
+    display: flex;
+    margin-right: .5em;
+    list-style: none;
+}
+
+#main-nav a {
+    display: block;
+    margin-left: 1em;
+    font-size: 1.4em;
+    line-height: 1.4em;
+
+}
+
+
+.active {
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+h1  {
+    color: white;
+    text-align: center;
+    font-family: Hiragino Kaku Gothic Std;
+}
+h3 {
+    color: white;
+    text-align: center;
+    font-family: helvetica;
+    line-height: 2;
+
+}
+p {
+    line-height: 1.5;
+    
+}
+
+.menukort {
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: white 5px solid;
+    margin: 5%;
+    padding: 2%
+}
+.menu-elementer {
+    padding:2%;
+    width: 44%;
+    font-size: 13px;
+}
+#sendknap {
+    width: 15%;
+    border: white 5px solid;
+   margin-top: 2%;
+    font-size: 21px;
+    background-color: white;
+    color: #262626
+}
+
+.footer {
+    background-color: #424242;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 5%
+
+}
+article {
+    margin: 5%;
+    display: flex;
+    flex-direction: column;   
+}
+
+
+.tilmelding-element {
+    border: 2px solid white;
+    margin-top: 10px;
+    font-size: 20px;
+    height: 30px;
+}
+.tilmelding-element h6 {
+    margin: 1.2%
+}
+header {
+    display: flex;
+    flex-direction: column
+}
+
+/*MEDIA QUERY MOBILE */
+
+@media screen and (max-width: 849px) {
+
+    /*HEADER NAV*/
+    header {
+        display:block;
+    }
+
+    h1 {
+        padding: 3%
+    }
+    #logo-burger {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #logo-burger label {
+        display: block;
+        font-size: 40px;
+        cursor: pointer;
+        color: white;
+        position: relative;
+        right: 5%;
+        top:5%
+    }
+
+    #toggle:checked + #main-nav {
+        animation-name: burger;
+        animation-duration: 0.5s;
+        display: block;
+    }
+    
+    @keyframes burger{
+        from{left: 300px;}
+        to{left: 0px;}
+    }
+
+    #main-nav {
+        position: absolute;
+        display: none;
+        left: 0;
+        background-color: #262626;
+        height: 100%;
+    }
+
+    #main-nav li {
+        text-align: center;
+        padding: 5%;
+            
+       
+    }
+
+    #main-nav a {
+        margin: 0;
+         color: white;
+        background-color: #262626;
+    }
+
+    #main-nav li:last-of-type {
+        border-bottom: none;
+    }
+
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #logo-burger {
+        margin: 0;
+    }
+
+    #main-nav {
+        justify-content: space-between;
+        width: 100%;
+        margin: 0;
+    }
+    
+    .hidden {
+        display: none;
+    }
+
+    label {
+        display: none;
+    }
+
+    /*CARD LAYOUT*/
+    .card {
+        flex: 0 1 31%;
+    }
+    #kaffebonner {
+        display: none;
+    }
+    
+}
+
+
+/*MEDIA QUERY LAPTOP AND ABOVE*/
+
+@media screen and (min-width: 850px) {
+
+    /*HEADER*/
+    header { 
+        display: flex;
+        align-content: center;
+    }
+    h1 {
+        font-size: 50px;
+        padding: 3%
+    }
+    
+    #main-nav{
+        right: 20px;
+        position: absolute;
+        top: 35px;
+        font-family: Hiragino Kaku Gothic Std;
+        font-size: 13px
+    }
+    
+    #main-nav a{
+        background-color: rgba(0,0,0,0);
+        color: white;
+    }
+    
+    label{
+        display: none;
+    }
+    
+    #logo-burger {
+        display: flex;
+        height: 300px;
+        align-items: flex-start;
+    }
+
+    .logo  {
+        width: 250px;
+        height: 200px;
+        margin: 2%
+    }
+    /*BODY*/
+    .menukort {
+    display: flex;
+    width: 70%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: white 5px solid;
+    margin: 15%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+            
+    }
+    .menu-elementer {
+    padding-top: 5%;
+    padding-bottom: 0%;
+    width: 30%;
+    font-size: 14px
+}
+    .kaffebarer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-family: Myriad Pro;
+        
+            
+    }
+    article {
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: row;
+    
+}
+    .omos {
+        padding: 5%;
+        width: 60%
+    }
+    .mobilkaffe {
+        padding: 5%;
+        width:60%;
+    }
+    .voreskaffe {
+        padding: 5%;
+        width: 60%
+    }
+    #intro {
+        padding-left: 27%;
+        padding-right: 27%
+    }
+/*FOOTER*/
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+       padding: 20px;
+    }
+}
